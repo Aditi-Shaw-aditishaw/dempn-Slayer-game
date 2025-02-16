@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: brown;
+    overflow: hidden;
+}
+
+.gameContainer {
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.dino {
+    background-image: url(Nezuko.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 236px;
+    height: 210px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+}
+
+.obstacle {
+    width: 155px;
+    height: 200px;
+    background-image: url(muzan.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 45vw;
+}
+
+.animateDino {
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver {
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    font-family: cursive;
+    color: rgb(131, 0, 0);
+}
+
+#scoreCont {
+    position: absolute;
+    font-weight: bold;
+    right: 45px;
+    top: 31px;
+    border: 2px solid white;
+    font-family: cursive;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#scoreH {
+    position: absolute;
+    font-weight: bold;
+    left: 45px;
+    top: 31px;
+    border: 2px solid white;
+    font-family: cursive;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 422px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -10vw
+    }
+}
